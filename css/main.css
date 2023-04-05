@@ -414,7 +414,12 @@ h2 {
 }
 .card__discount--primary {
   width: 2.5rem;
-  display: none;
+  display: flex;
+}
+@media screen and (min-width: 62em) {
+  .card__discount--primary {
+    display: none;
+  }
 }
 .card__discount--secondary {
   display: none;

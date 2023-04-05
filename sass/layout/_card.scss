@@ -238,7 +238,10 @@
 
   &__discount--primary {
     width: 2.5rem;
-    display: none;
+    display: flex;
+    @include a.media-breakpoint-up(62em) {
+      display: none;
+    }
   }
 
   &__discount--secondary {
