@@ -95,7 +95,7 @@ body {
   font-family: "Manrope", sans-serif;
   background-color: hsl(228, 100%, 99%);
   color: hsl(225, 20%, 60%);
-  background-image: url(../../images/bg-pattern.svg);
+  background-image: url(../images/bg-pattern.svg);
   background-repeat: no-repeat;
   background-position: 0 -11%;
 }
@@ -158,7 +158,7 @@ h2 {
   }
 }
 .header::before {
-  content: url(../../images/pattern-circles.svg);
+  content: url(../images/pattern-circles.svg);
   position: absolute;
   top: -45%;
   left: 50%;
@@ -259,7 +259,7 @@ h2 {
   height: 2.5rem;
   background-color: hsl(174, 86%, 45%);
   border-radius: 50%;
-  background-image: url(../../images/icon-slider.svg);
+  background-image: url(../images/icon-slider.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   box-shadow: 0px 20px 36px -4px hsl(174, 86%, 45%);
@@ -279,7 +279,7 @@ h2 {
   height: 2.5rem;
   background-color: hsl(174, 86%, 45%);
   border-radius: 50%;
-  background-image: url(../../images/icon-slider.svg);
+  background-image: url(../images/icon-slider.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   box-shadow: 0px 20px 36px -4px hsl(174, 86%, 45%);
@@ -457,7 +457,7 @@ h2 {
   gap: 1rem;
 }
 .card__item::before {
-  content: url(../../images/icon-check.svg);
+  content: url(../images/icon-check.svg);
 }
 .card__btn {
   margin-top: 2rem;

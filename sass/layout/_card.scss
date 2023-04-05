@@ -72,7 +72,7 @@
     height: 2.5rem;
     background-color: a.$sliderBg-clr;
     border-radius: 50%;
-    background-image: url(../../images/icon-slider.svg);
+    background-image: url(../images/icon-slider.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     box-shadow: 0px 20px 36px -4px a.$sliderBg-clr;
@@ -96,7 +96,7 @@
     height: 2.5rem;
     background-color: a.$sliderBg-clr;
     border-radius: 50%;
-    background-image: url(../../images/icon-slider.svg);
+    background-image: url(../images/icon-slider.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     box-shadow: 0px 20px 36px -4px a.$sliderBg-clr;
@@ -277,7 +277,7 @@
   }
 
   &__item::before {
-    content: url(../../images/icon-check.svg);
+    content: url(../images/icon-check.svg);
   }
 
   &__btn {
