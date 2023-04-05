@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+// Font Family
+$main-font: "Manrope", sans-serif;
+
+// Primary color
+$fullSliderBar-clr: hsl(174, 77%, 80%);
+$sliderBg-clr: hsl(174, 86%, 45%);
+$discountBg-clr: hsl(14, 92%, 95%);
+$discountText-clr: hsl(15, 100%, 70%);
+$btnText-clr: hsl(226, 100%, 87%);
+
+//Neutral colors
+$cardBg-clr: hsl(0, 0%, 100%);
+$mainBg-clr: hsl(228, 100%, 99%);
+$emptySliderBg-clr: hsl(224, 65%, 95%);
+$toggleBg-clr: hsl(223, 50%, 87%);
+$text-clr: hsl(225, 20%, 60%);
+$bigTxtBtnBg-clr: hsl(227, 35%, 25%);
+
+$transition: all 0.15s ease-in;

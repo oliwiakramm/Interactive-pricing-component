@@ -1,0 +1,289 @@
+@use "../abstracts" as a;
+.card {
+  background-color: a.$cardBg-clr;
+  border-radius: 12px;
+  text-align: center;
+  padding: 2.15rem 0;
+  box-shadow: 0px 0px 13px -3px rgba(66, 68, 90, 0.2);
+  max-width: 30rem;
+  margin: 0 auto;
+
+  @include a.media-breakpoint-up(62em) {
+    max-width: 33.8rem;
+    margin-top: 1.3rem;
+    padding-bottom: 1.9rem;
+  }
+
+  &__form {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 2.6rem;
+    position: relative;
+    padding: 0 0.7rem 2.35rem;
+
+    @include a.media-breakpoint-up(62em) {
+      padding: 0.5rem 2.65rem 2.5rem;
+    }
+  }
+
+  &__heading {
+    grid-column: span 2;
+
+    @include a.media-breakpoint-up(62em) {
+      grid-column: 1/2;
+      align-self: center;
+      justify-self: start;
+    }
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 2rem;
+    background: a.$emptySliderBg-clr;
+    cursor: pointer;
+    width: 17.5rem;
+    height: 0.5rem;
+    background-image: linear-gradient(
+      a.$fullSliderBar-clr,
+      a.$fullSliderBar-clr
+    );
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    @include a.media-breakpoint-up(62em) {
+      width: 27.7rem;
+    }
+    grid-column: span 2;
+  }
+
+  /***** Chrome, Safari, Opera, and Edge Chromium *****/
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 0.5rem;
+    border-radius: 2rem;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -16px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: a.$sliderBg-clr;
+    border-radius: 50%;
+    background-image: url(../../images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    box-shadow: 0px 20px 36px -4px a.$sliderBg-clr;
+    cursor: grabbing;
+
+    @include a.media-hover-effect {
+      &:hover {
+        background-color: darken(a.$sliderBg-clr, 5%);
+      }
+    }
+  }
+
+  /******** Firefox ********/
+  input[type="range"]::-moz-range-track {
+    border-radius: 2rem;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: a.$sliderBg-clr;
+    border-radius: 50%;
+    background-image: url(../../images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    box-shadow: 0px 20px 36px -4px a.$sliderBg-clr;
+    cursor: grabbing;
+  }
+
+  &__price {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.85rem;
+    grid-column: span 2;
+
+    @include a.media-breakpoint-up(62em) {
+      grid-column: 2/-1;
+      grid-row: 1/2;
+      font-size: 0.97rem;
+      gap: 0.5rem;
+      justify-self: start;
+    }
+  }
+
+  &__amount {
+    font-size: 1.9rem;
+    color: a.$bigTxtBtnBg-clr;
+    font-weight: 800;
+
+    @include a.media-breakpoint-up(62em) {
+      font-size: 2.45rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-top: -0.45rem;
+    grid-column: span 2;
+    @include a.media-breakpoint-up(62em) {
+      margin-top: 0.75rem;
+      justify-self: end;
+      margin-right: 1.6rem;
+      gap: 0.95rem;
+    }
+  }
+
+  input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    position: absolute;
+  }
+
+  #monthly {
+    left: 0;
+
+    & + label {
+      margin-left: 2rem;
+    }
+  }
+
+  #yearly {
+    right: 0;
+  }
+
+  label {
+    font-size: 0.75rem;
+    transition: a.$transition;
+
+    @include a.media-hover-effect {
+      &:hover {
+        color: darken(a.$text-clr, 20%);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__toggle {
+    width: 2.7rem;
+    height: 1.4rem;
+    border-radius: 3rem;
+    background-color: a.$toggleBg-clr;
+    position: relative;
+    transition: a.$transition;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.25rem;
+      left: 0.25rem;
+      height: 0.9rem;
+      width: 0.9rem;
+      border-radius: 50%;
+      background-color: a.$cardBg-clr;
+      transition: a.$transition;
+    }
+    &.yearly {
+      background-color: a.$sliderBg-clr;
+
+      @include a.media-hover-effect {
+        &:hover {
+          background-color: lighten(a.$sliderBg-clr, 4%);
+        }
+      }
+    }
+
+    &.yearly::before {
+      left: 1.55rem;
+    }
+
+    @include a.media-hover-effect {
+      &:hover {
+        background-color: a.$sliderBg-clr;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    @include a.media-breakpoint-up(62em) {
+      gap: 0.6rem;
+    }
+  }
+
+  &__discount {
+    color: a.$discountText-clr;
+    background-color: a.$discountBg-clr;
+    font-size: 0.6rem;
+    height: 1.1rem;
+    border-radius: 2rem;
+    @include a.flex;
+  }
+
+  &__discount--primary {
+    width: 2.5rem;
+    display: none;
+  }
+
+  &__discount--secondary {
+    display: none;
+    font-size: 0.65rem;
+    @include a.media-breakpoint-up(62em) {
+      display: flex;
+      padding: 0 0.35rem;
+    }
+  }
+
+  &__features {
+    padding-top: 1.6rem;
+    border-top: 1px solid a.$emptySliderBg-clr;
+    @include a.media-breakpoint-up(62em) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2.1rem 2.75rem 0 2.9rem;
+    }
+  }
+
+  &__list {
+    @include a.flex;
+    gap: 0.5rem;
+    @include a.media-breakpoint-up(62em) {
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    font-size: 0.77rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__item::before {
+    content: url(../../images/icon-check.svg);
+  }
+
+  &__btn {
+    margin-top: 2rem;
+    @include a.media-breakpoint-up(62em) {
+      margin-top: 0;
+    }
+  }
+}

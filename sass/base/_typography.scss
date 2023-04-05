@@ -1,0 +1,17 @@
+@use "../abstracts" as a;
+h1 {
+  color: a.$bigTxtBtnBg-clr;
+  font-weight: 800;
+  font-size: clamp(1.25rem, calc(1rem + 1.4vw), 1.76rem);
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 0.81rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  @include a.media-breakpoint-up(62em) {
+    font-size: 0.97rem;
+  }
+}

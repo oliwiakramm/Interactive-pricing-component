@@ -1,0 +1,22 @@
+@use "../abstracts" as a;
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4.1rem;
+  font-family: a.$main-font;
+  background-color: a.$mainBg-clr;
+  color: a.$text-clr;
+  background-image: url(../../images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-position: 0 -11%;
+
+  @include a.media-breakpoint-up(62em) {
+    background-size: contain;
+    background-position: 0 0;
+  }
+}
+
+.main {
+  padding: 0 1.5rem;
+}

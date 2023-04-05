@@ -1,0 +1,20 @@
+@use "../abstracts" as a;
+
+.btn {
+  border: none;
+  background-color: a.$bigTxtBtnBg-clr;
+  color: a.$btnText-clr;
+  font-family: inherit;
+  padding: 0.76rem 2.85rem;
+  font-size: 0.79rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: a.$transition;
+
+  @include a.media-hover-effect {
+    &:hover {
+      color: a.$cardBg-clr;
+      transform: scale(1.05);
+    }
+  }
+}

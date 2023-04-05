@@ -1,0 +1,39 @@
+@use "../abstracts" as a;
+.header {
+  margin-top: 5.65rem;
+  padding: 0 1.5rem;
+  text-align: center;
+  position: relative;
+
+  @include a.media-breakpoint-up(62em) {
+    margin-top: 6.5rem;
+  }
+
+  &::before {
+    content: url(../../images/pattern-circles.svg);
+    position: absolute;
+    top: -45%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+
+    @include a.media-breakpoint-up(62em) {
+      top: -50%;
+    }
+  }
+
+  &__info {
+    color: a.$text-clr;
+    font-size: 0.82rem;
+    margin-top: 0.55rem;
+    max-width: 11rem;
+    margin: 0.55rem auto 0;
+    line-height: 1.5;
+
+    @include a.media-breakpoint-up(62em) {
+      max-width: none;
+      margin-top: 0.6rem;
+      font-size: 0.95rem;
+    }
+  }
+}
